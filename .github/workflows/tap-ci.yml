@@ -20,11 +20,21 @@ jobs:
       - name: Update Homebrew
         run: brew update
 
+      # brew refuses file paths for audit/install ("Calling `brew audit
+      # [path ...]` is disabled!"), so expose the checkout as the real tap
+      # and address the formula by its qualified name.
+      - name: Register checkout as the jlong/shelbi tap
+        run: |
+          tap_dir="$(brew --repository)/Library/Taps/jlong/homebrew-shelbi"
+          mkdir -p "$(dirname "$tap_dir")"
+          rm -rf "$tap_dir"
+          ln -s "$GITHUB_WORKSPACE" "$tap_dir"
+
       - name: Audit formula
-        run: brew audit --strict --online --formula Formula/shelbi.rb
+        run: brew audit --strict --online jlong/shelbi/shelbi
 
       - name: Install formula
-        run: brew install --formula Formula/shelbi.rb
+        run: brew install --formula jlong/shelbi/shelbi
 
       - name: Test formula
-        run: brew test shelbi
+        run: brew test jlong/shelbi/shelbi

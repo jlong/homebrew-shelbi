@@ -1,18 +1,18 @@
 class Shelbi < Formula
   desc "Open-source agent orchestrator built on tmux"
   homepage "https://github.com/jlong/shelbi"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jlong/shelbi/releases/download/v0.3.1/shelbi_Darwin_arm64.tar.gz"
-      sha256 "70525c68ce66b66fe0896c957a58004d9f1acf56d291d4c5f874d1d62a78eb39"
+      url "https://github.com/jlong/shelbi/releases/download/v0.3.2/shelbi_Darwin_arm64.tar.gz"
+      sha256 "778f7dff799b784648c85e0bbe4ea125a333596c220938109f4473eab2b49cc4"
     else
-      url "https://github.com/jlong/shelbi/releases/download/v0.3.1/shelbi_Darwin_x86_64.tar.gz"
-      sha256 "453673fcbd799650327e7b4c932f6ce8e57c9b090729d1dd67cb130f2c65ff59"
+      url "https://github.com/jlong/shelbi/releases/download/v0.3.2/shelbi_Darwin_x86_64.tar.gz"
+      sha256 "84c6fe782dc5ba0940c0b71e0be4a7ca8577f967fb8206f302f71f8607b2d0cf"
     end
   end
 

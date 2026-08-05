@@ -1,7 +1,6 @@
 class Shelbi < Formula
   desc "Open-source agent orchestrator built on tmux"
   homepage "https://github.com/jlong/shelbi"
-  version "0.7.1"
   license "MIT"
 
   depends_on "tmux"

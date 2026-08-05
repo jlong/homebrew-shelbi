@@ -7,11 +7,11 @@ class Shelbi < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jlong/shelbi/releases/download/v0.7.1/shelbi_Darwin_arm64.tar.gz"
-      sha256 "cb4ee7c6f8c184687badeb66ad1aae6538c034a13180d5a77092d55cbd89569f"
+      url "https://github.com/jlong/shelbi/releases/download/v0.7.2/shelbi_Darwin_arm64.tar.gz"
+      sha256 "10ecc5bac9495665ecd18066184bc42669a3cdea0d23dcb04026970769a18ec8"
     else
-      url "https://github.com/jlong/shelbi/releases/download/v0.7.1/shelbi_Darwin_x86_64.tar.gz"
-      sha256 "55a23b6dfab7bb945b440f24faaadb1dc7377f2531ff457363eb354126229197"
+      url "https://github.com/jlong/shelbi/releases/download/v0.7.2/shelbi_Darwin_x86_64.tar.gz"
+      sha256 "51caa4177086d2f3fd78994e2fb2019de69ac73ada908d6f27001c17574008ab"
     end
   end
 

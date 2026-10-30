@@ -30,6 +30,11 @@ jobs:
           rm -rf "$tap_dir"
           ln -s "$GITHUB_WORKSPACE" "$tap_dir"
 
+      # Homebrew now refuses to load formulae from an untrusted tap, even one
+      # it has registered, so trust the checkout before auditing it.
+      - name: Trust the tap
+        run: brew trust jlong/shelbi
+
       - name: Audit formula
         run: brew audit --strict --online jlong/shelbi/shelbi
 

@@ -1,6 +1,6 @@
 cask "shelbi-desktop" do
-  version "0.13.1"
-  sha256 "326ea02fe654e7b9832eeed202decbb34a97c0460659c63505a4e6905770a4c3"
+  version "0.13.2"
+  sha256 "399f7f7973e096a6f227b6b9aa8623c7322cea57d8f53b930ecf9daece3daf9e"
 
   url "https://github.com/jlong/shelbi/releases/download/v#{version}/Shelbi-#{version}-arm64.zip"
   name "Shelbi"

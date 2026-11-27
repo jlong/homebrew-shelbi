@@ -5,11 +5,11 @@ class Shelbi < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jlong/shelbi/releases/download/v0.14.0/shelbi_Darwin_arm64.tar.gz"
-      sha256 "14249f6d47d9150a006423a9045a08f3ab9d95c99ed946c022d076a70e0700c1"
+      url "https://github.com/jlong/shelbi/releases/download/v0.15.0/shelbi_Darwin_arm64.tar.gz"
+      sha256 "88f341c09abd1781c3ae16c756079e6bcc0c5d3c3e945d61cdf76f0a9a4c478c"
     else
-      url "https://github.com/jlong/shelbi/releases/download/v0.14.0/shelbi_Darwin_x86_64.tar.gz"
-      sha256 "ed911679431ab99f53b3f77534ac4fc3fdd91bbf58720d229071b8225321f70d"
+      url "https://github.com/jlong/shelbi/releases/download/v0.15.0/shelbi_Darwin_x86_64.tar.gz"
+      sha256 "4f290cb9b9a5c0753097f089d69cf47a0cbde6677dcc8fddd7bdca91b9bd951b"
     end
   end
 
@@ -23,5 +23,8 @@ class Shelbi < Formula
     assert_path_exists pkgshare/"plugins/update-shelbi-configuration/.claude-plugin/plugin.json"
     assert_path_exists pkgshare/"plugins/update-shelbi-configuration/.codex-plugin/plugin.json"
     assert_path_exists pkgshare/"plugins/update-shelbi-configuration/skills/update-shelbi-configuration/SKILL.md"
+    assert_path_exists pkgshare/"plugins/shelbi-awareness/.claude-plugin/plugin.json"
+    assert_path_exists pkgshare/"plugins/shelbi-awareness/hooks/hooks.json"
+    assert_path_exists pkgshare/"plugins/shelbi-awareness/monitors/monitors.json"
   end
 end
